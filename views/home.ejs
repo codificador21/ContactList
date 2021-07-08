@@ -8,22 +8,33 @@
     </head>
     <body>
        <div id = "container">
-        <div>
-            <span><i class="fas fa-address-book"></i></span>
-        <span><h1>ContactList</h1></span>
+        <div id = "heading">
+            
+              <span><h1> <i class="fas fa-address-book"></i> ContactList</h1></span>
+        </div>
+        <div id = "add-contact">
+            <form action="/create-contact" method="post">
+                <input type="text" name = "name" placeholder="name" required>
+                <input type="number" name = "phone" placeholder="phone" required>
+                <button type="submit">Add contact</button>
+            </form>
+        </div>
+        <div id = "name-contact">
         <ul>
         <% for(let i of contact_list){ %>
             
                  <li>
-                     <div class = "info">
-                     <p><%= i.name%></p>
-                     <p><%= i.phone%></p>
-                     </div>
-                     <div class = "delete_button">
-                         <!-- <a href="/delete-contact/<%= i.phone %>">      //request.params -->
-                            <a href="/delete-contact/?id=<%= i._id %>">  <!-- request.querry -->
-                                <i class="fas fa-trash"></i>
-                         </a>
+                     <div id = "li">
+                        <div id = "info">
+                            <div><%= i.name%></div>
+                            <div><%= i.phone%></div>
+                         </div>
+                         <div id = "delete_button">
+                             
+                                <a href="/delete-contact/?id=<%= i._id %>">  <!-- request.querry -->
+                                    <i class="fas fa-trash"></i>
+                             </a>
+                         </div>
                      </div>
                  </li>
             
@@ -31,11 +42,7 @@
         </ul>
         </div>   
 
-        <form action="/create-contact" method="post">
-            <input type="text" name = "name" placeholder="name" required>
-            <input type="number" name = "phone" placeholder="phone" required>
-            <button type="submit">Add contact</button>
-        </form>
+        
        </div>
         <script src = /js/home.js></script>
     </body>

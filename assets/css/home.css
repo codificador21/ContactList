@@ -1,14 +1,43 @@
-body{
-    margin:0px;
-}
+body {
+  margin: 0px; }
 
-#container{
-    display: block;
-    margin: 20vw;
-}
-
-.delete{
-    width: 10px;
-    height: 10px;
-    border: 1px solid black;
-}
+#container {
+  display: block;
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 10vh;
+  width: 60vw;
+  text-align: center;
+  background-color: #d1e0b4; }
+  #container #add-contact form input {
+    background: none;
+    width: 20vw;
+    height: 7vh;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: x-large; }
+  #container #add-contact form button {
+    width: 10vw;
+    height: 7vh;
+    font-size: large; }
+  #container #name-contact ul {
+    margin: 0px;
+    padding-left: 0;
+    list-style-type: none; }
+    #container #name-contact ul li {
+      padding: 20px;
+      border-top: 1px solid black; }
+      #container #name-contact ul li #li {
+        display: flex;
+        justify-content: space-between; }
+        #container #name-contact ul li #li #info {
+          display: flex;
+          flex-direction: row;
+          width: 90%;
+          justify-content: space-between;
+          padding-left: 20px; }
+          #container #name-contact ul li #li #info div {
+            font-size: xx-large; }
+        #container #name-contact ul li #li #delete_button a i {
+          color: red;
+          font-size: xx-large; }

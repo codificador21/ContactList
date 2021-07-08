@@ -1,18 +1,28 @@
 const express = require('express');
 const path = require('path');
 const { runInNewContext } = require('vm');
-const port = 8000;
+const port = 5000;
 
 
 const db = require('./config/mongoose');
 const Contact = require('./models/contact')
+const sassMiddleware = require('node-sass-middleware');
+
 
 const app = express();
 
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
+app.use(sassMiddleware({
+    src: './assets/scss',
+    dest: './assets/css',
+    debug:true,
+    outputStyle:'extended',
+    prefix:'/css'
+}));
 app.use(express.urlencoded());
 app.use(express.static('assets'));
+
 
 
 // var contactList = [
