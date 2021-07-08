@@ -1,0 +1,42 @@
+<html>
+    <head>
+             <title>
+                 <%= title%>
+             </title>
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+             <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+       <div id = "container">
+        <div>
+            <span><i class="fas fa-address-book"></i></span>
+        <span><h1>ContactList</h1></span>
+        <ul>
+        <% for(let i of contact_list){ %>
+            
+                 <li>
+                     <div class = "info">
+                     <p><%= i.name%></p>
+                     <p><%= i.phone%></p>
+                     </div>
+                     <div class = "delete_button">
+                         <!-- <a href="/delete-contact/<%= i.phone %>">      //request.params -->
+                            <a href="/delete-contact/?id=<%= i._id %>">  <!-- request.querry -->
+                                <i class="fas fa-trash"></i>
+                         </a>
+                     </div>
+                 </li>
+            
+         <% } %>
+        </ul>
+        </div>   
+
+        <form action="/create-contact" method="post">
+            <input type="text" name = "name" placeholder="name" required>
+            <input type="number" name = "phone" placeholder="phone" required>
+            <button type="submit">Add contact</button>
+        </form>
+       </div>
+        <script src = /js/home.js></script>
+    </body>
+</html>

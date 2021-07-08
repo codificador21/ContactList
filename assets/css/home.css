@@ -1,0 +1,14 @@
+body{
+    margin:0px;
+}
+
+#container{
+    display: block;
+    margin: 20vw;
+}
+
+.delete{
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+}
