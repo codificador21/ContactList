@@ -1,25 +1,28 @@
 body {
-  margin: 0px; }
+  margin: 0px;
+  background-image: url("../background.jpg");
+  background-position: center; }
 
 #container {
   display: block;
   border: 1px solid black;
+  border-radius: 5%;
   margin: auto;
   margin-top: 10vh;
-  width: 60vw;
+  width: 30vw;
   text-align: center;
-  background-color: #d1e0b4; }
+  background-color: rgba(255, 255, 255, 0.8); }
   #container #add-contact form input {
     background: none;
-    width: 20vw;
+    width: 10vw;
     height: 7vh;
     border: none;
     border-bottom: 1px solid black;
     font-size: x-large; }
   #container #add-contact form button {
-    width: 10vw;
-    height: 7vh;
-    font-size: large; }
+    width: 7vw;
+    height: 5vh;
+    font-size: small; }
   #container #name-contact ul {
     margin: 0px;
     padding-left: 0;
@@ -33,11 +36,11 @@ body {
         #container #name-contact ul li #li #info {
           display: flex;
           flex-direction: row;
-          width: 90%;
+          width: 80%;
           justify-content: space-between;
           padding-left: 20px; }
           #container #name-contact ul li #li #info div {
-            font-size: xx-large; }
+            font-size: x-large; }
         #container #name-contact ul li #li #delete_button a i {
-          color: red;
-          font-size: xx-large; }
+          color: #a82c2c;
+          font-size: large; }
